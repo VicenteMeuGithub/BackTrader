@@ -1,0 +1,78 @@
+{
+  "global": {
+    "datafile": "data/MNQ - 01Out ate 30Nov.Last.txt",
+    "strategy": "sma_test"
+  },
+  
+  "batches": {
+    "sma": {
+      "name": "Otimização de SMA Period",
+      "fixed": {
+        "timeframe": 10,
+        "stop_points": 20,
+        "target_rr": 2.0
+      },
+      "variable": {
+        "sma_period": [5, 10, 15, 20, 30, 50, 80]
+      }
+    },
+    
+    "stop": {
+      "name": "Otimização de Stop Loss",
+      "fixed": {
+        "timeframe": 10,
+        "sma_period": 30,
+        "target_rr": 2.0
+      },
+      "variable": {
+        "stop_points": [10, 15, 20, 25, 30]
+      }
+    },
+    
+    "target": {
+      "name": "Otimização de Target (Risk/Reward)",
+      "fixed": {
+        "timeframe": 10,
+        "sma_period": 30,
+        "stop_points": 30
+      },
+      "variable": {
+        "target_rr": [1.0, 1.5, 2.0, 2.5, 3.0]
+      }
+    },
+    
+    "timeframe": {
+      "name": "Otimização de Timeframe",
+      "fixed": {
+        "sma_period": 30
+      },
+      "variable": {
+        "timeframe": [1, 5, 10, 15, 30]
+      }
+    },
+    
+    "full_grid": {
+      "name": "Grid Search Completo (SMA x Stop x Target)",
+      "fixed": {
+        "timeframe": 10
+      },
+      "variable": {
+        "sma_period": [20, 30, 50],
+        "stop_points": [15, 20, 25],
+        "target_rr": [1.5, 2.0, 2.5]
+      }
+    },
+    
+    "custom": {
+      "name": "Teste Customizado",
+      "fixed": {
+        "timeframe": 5,
+        "sma_period": 20
+      },
+      "variable": {
+        "stop_points": [10, 12, 15, 18, 20],
+        "target_rr": [1.0, 1.5, 2.0]
+      }
+    }
+  }
+}

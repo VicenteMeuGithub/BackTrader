@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Results (opcional - se não quiser versionar)
+strategies/*/result_*.csv
+
+# Data (arquivos grandes)
+data/*.txt
+data/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Env (se usar)
+venv/
+env/
+.env
