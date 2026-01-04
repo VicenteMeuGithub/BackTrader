@@ -10,6 +10,7 @@ __pycache__/
 dist/
 build/
 OLD/
+BACKUPS/
 
 # IDEs
 .vscode/
